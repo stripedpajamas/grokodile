@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const colorette = require('colorette')
 const clp = require('clp')
 const neatLog = require('neat-log')
