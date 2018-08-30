@@ -1,0 +1,34 @@
+{
+  "name": "grokodile",
+  "version": "0.0.1",
+  "description": "get your code/website publicly accessible while developing",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stripedpajamas/grokodile.git"
+  },
+  "keywords": [
+    "ngrok",
+    "serve",
+    "public",
+    "host"
+  ],
+  "author": "Peter Squicciarini <stripedpajamas273@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stripedpajamas/grokodile/issues"
+  },
+  "homepage": "https://github.com/stripedpajamas/grokodile#readme",
+  "dependencies": {
+    "clp": "^4.0.10",
+    "colorette": "^1.0.1",
+    "ngrok": "^3.0.1",
+    "serve-handler": "^5.0.0"
+  },
+  "devDependencies": {
+    "standard": "^12.0.0"
+  }
+}

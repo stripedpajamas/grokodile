@@ -1,0 +1,6 @@
+{
+  "httpServer": true, 
+  "port": 3000,
+  "build": "npm run build",
+  "path": "./dist"
+}
