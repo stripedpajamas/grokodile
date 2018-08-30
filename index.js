@@ -36,8 +36,10 @@ neat.use((state, bus) => {
     .then((json) => { configJson = json })
     .then(() => http(configJson))
     .then((status) => {
-      state.messages.push(bold(white(status)))
-      bus.emit('render')
+      if (status) {
+        state.messages.push(bold(white(status)))
+        bus.emit('render')
+      }
     })
     .then(() => ngrok(configJson))
     .then((url) => {
