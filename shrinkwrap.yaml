@@ -1,6 +1,7 @@
 dependencies:
   clp: 4.0.10
   colorette: 1.0.1
+  neat-log: 3.1.0
   ngrok: 3.0.1
   serve-handler: 5.0.0
 devDependencies:
@@ -54,6 +55,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-LqZ9wY+fx3UMiiPd741yB2pj3hhil+hQc8taf4o2QGRFpWgZ2V5C8HA165DY9sS3fJwsk7uT7ZlFEyC3Ig3lLg==
+  /ansi-diff/1.1.1:
+    dependencies:
+      ansi-split: 1.0.1
+    dev: false
+    resolution:
+      integrity: sha512-XnTdFDQzbEewrDx8epWXdw7oqHMvv315vEtfqDiEhhWghIf4++h26c3/FMz7iTLhNrnj56DNIXpbxHZq+3s6qw==
   /ansi-escapes/3.1.0:
     dev: true
     engines:
@@ -67,11 +74,16 @@ packages:
     resolution:
       integrity: sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
   /ansi-regex/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
       integrity: sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
+  /ansi-split/1.0.1:
+    dependencies:
+      ansi-regex: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha512-RRxQym4DFtDNmHIkW6aeFVvrXURb11lGAEPXNiryjCe8bK8RsANjzJ0M2aGOkvBYwP4Bl/xZ8ijtr6D3j1x/eg==
   /ansi-styles/2.2.1:
     dev: true
     engines:
@@ -413,6 +425,13 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
+  /diffy/2.0.0:
+    dependencies:
+      ansi-diff: 1.1.1
+      neat-input: 1.8.0
+    dev: false
+    resolution:
+      integrity: sha512-T1+MF7chaOtNaBeV59td6lYlci6dCTUraySH8LDltafhd+FLTsYpJJbLVpl6S4ih6kPFMaHSIqQ92bRVvoE+3Q==
   /doctrine/1.5.0:
     dependencies:
       esutils: 2.0.2
@@ -1158,6 +1177,10 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha1-6AGxs5mF4g//yHtA43SAgOLcrH8=
+  /keypress/0.2.1:
+    dev: false
+    resolution:
+      integrity: sha1-HoBFQlABjbrUw/6USX1uZ7YmnHc=
   /kind-of/3.2.2:
     dependencies:
       is-buffer: 1.1.6
@@ -1210,6 +1233,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-K1aLJl7slExtnA3pw9u7ygNUzY4=
+  /lodash.throttle/4.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
   /lodash/4.17.10:
     resolution:
       integrity: sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg==
@@ -1291,10 +1318,48 @@ packages:
     dev: true
     resolution:
       integrity: sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
+  /nanoassert/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-TzFS4JVA/eKMdvRLGbvNHVpCR40=
+  /nanobus/4.3.3:
+    dependencies:
+      nanotiming: 7.3.1
+      remove-array-items: 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-4/uzl+LkMGoVv/9eMzH2QFvefmlJErT0KR7EmuYbmht2QvxSEqTjhFFOZ/KHE6chH58fKL3njrOcEwbYV0h9Yw==
+  /nanoscheduler/1.0.3:
+    dependencies:
+      nanoassert: 1.1.0
+    dev: false
+    resolution:
+      integrity: sha512-jBbrF3qdU9321r8n9X7yu18DjP31Do2ItJm3mWrt90wJTrnDO+HXpoV7ftaUglAtjgj9s+OaCxGufbvx6pvbEQ==
+  /nanotiming/7.3.1:
+    dependencies:
+      nanoassert: 1.1.0
+      nanoscheduler: 1.0.3
+    dev: false
+    resolution:
+      integrity: sha512-l3lC7v/PfOuRWQa8vV29Jo6TG10wHtnthLElFXs4Te4Aas57Fo4n1Q8LH9n+NDh9riOzTVvb2QNBhTS4JUKNjw==
   /natural-compare/1.4.0:
     dev: true
     resolution:
       integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
+  /neat-input/1.8.0:
+    dependencies:
+      keypress: 0.2.1
+    dev: false
+    resolution:
+      integrity: sha512-9LsyX7NcQBOT0/VEthxOCpYlKXgo0UZeGlMSx/a2SKFkE4ZiU/wTUBoF9brQKtKspmBZyLnXqDiktsbopEb0Tg==
+  /neat-log/3.1.0:
+    dependencies:
+      diffy: 2.0.0
+      lodash.throttle: 4.1.1
+      nanobus: 4.3.3
+    dev: false
+    resolution:
+      integrity: sha512-VarbsDsRN5C5pCdOskjJ7bOPvyjYeVduftgs1dYXqoFXwKFBPJq3VrmFRpbwjoW03Z80DSiiDbaPGX7ix+OFyA==
   /ngrok/3.0.1:
     dependencies:
       '@types/node': 8.10.28
@@ -1618,6 +1683,10 @@ packages:
       node: '>=6.5.0'
     resolution:
       integrity: sha512-g2FAVtR8Uh8GO1Nv5wpxW7VFVwHcCEr4wyA8/MHiRkO8uHoR5ntAA8Uq3P1vvMTX/BeQiRVSpDGLd+Wn5HNOTA==
+  /remove-array-items/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-B79CyzMvTPboXq2DteToltIyayE=
   /request-promise-core/1.1.1/request@2.88.0:
     dependencies:
       lodash: 4.17.10
@@ -2053,6 +2122,7 @@ shrinkwrapVersion: 3
 specifiers:
   clp: ^4.0.10
   colorette: ^1.0.1
+  neat-log: ^3.1.0
   ngrok: ^3.0.1
   serve-handler: ^5.0.0
   standard: ^12.0.0

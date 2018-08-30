@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "get your code/website publicly accessible while developing",
   "main": "index.js",
+  "bin": {
+    "grokodile": "index.js"
+  },
   "scripts": {
     "test": "standard"
   },
@@ -25,6 +28,7 @@
   "dependencies": {
     "clp": "^4.0.10",
     "colorette": "^1.0.1",
+    "neat-log": "^3.1.0",
     "ngrok": "^3.0.1",
     "serve-handler": "^5.0.0"
   },

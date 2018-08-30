@@ -1,13 +1,17 @@
-# grokodile
+# :crocodile: grokodile :crocodile:
 
 #### get your code/website publicly accessible while developing
-
-use case: developing a website and you want someone to be able to watch your progress live.
 
 ## install / setup
 to run in your project:
 ```bash
 $ npx grokodile
+```
+
+or you can install it globally and run it quickly whenever you want:
+```bash
+$ npm install -g grokodile
+$ grokodile
 ```
 
 the default config runs a local dev server on port 3000 and builds your project with `npm run build`. it assumes your build script puts files to be served in the directory `./build`.
